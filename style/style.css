@@ -27,7 +27,7 @@
 .banner{
     background-image: url(../img/home-header.png);
     background-size: cover;
-    background-position: center;
+    background-position: left;
     height: calc(100vh - 80px);
 }
 .banner-text{
@@ -130,13 +130,14 @@ justify-content: space-between;
     justify-content: center; 
     align-items: center;
     border: 0px;
+    margin: 0 auto;
 }
 .row{
     margin-left: -12px;
     margin-right: -12px;
 }
 .col-3{
-    width:25%;
+    max-width:25%;
     padding-left: 12px;
     padding-right: 12px;
 }
@@ -170,6 +171,9 @@ justify-content: space-between;
 }
 .mt-2{
     margin-top: 8px;
+}
+.m-a{
+    margin: 0 auto;
 }
 .gap-4{
     gap:24px;
@@ -227,21 +231,36 @@ justify-content: space-between;
 .boder-0{
     border: 0.5px solid white;
 }
+textarea {
+    padding: 10px;
+    max-width: 100%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #000000;
+  }
+  
 /* rwd */
+@media (max-width:992px){
+    .col-mb-12{
+        width: 80%;
+    }
+}
 @media (max-width:767px){
     .container{
         max-width: 720px;
         padding-left: 12px;
         padding-right: 12px;
     }
-    .col-6{
-        width:50%;
-    } 
     .col-10{
         width:83.33333%;
     }
     .col-12{
         width: 100%;
+    }
+    .mb-col-6{
+        max-width:50%;
+        padding-left: 12px;
+        padding-right: 12px;
     }
     .product-img{
         width: 336px;
@@ -270,6 +289,9 @@ justify-content: space-between;
     .header>.container{
         flex-direction: column;
         align-items: start;
+        max-width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
     }
     .nav{
         width: 100%;
@@ -288,8 +310,22 @@ justify-content: space-between;
     .banner{
         background-image: url(../img/home-header-sm.png);
 }
+.sm-p{
+    font-size: 16px;
+}
+.sm-h4{
+    font-size: 24px;
+}
+.intro>.container,.banner>.container{
+    max-width: 100%;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+.sm-h5{
+    font-size: 20px;
+}
 .col-12{
-    width:100%;
+    max-width:100%;
 } 
 .card-img-double{
     background-image: url(../img/home-section4-1-sm.png);
@@ -328,5 +364,8 @@ justify-content: space-between;
 }
 .w-3{
     width: 24px;
+}
+.btn-sure{
+    width: 100%;
 }
 }
